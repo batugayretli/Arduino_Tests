@@ -1,0 +1,41 @@
+// Project          : SERVO TEST
+// Version          : v1.0
+// Author           : Batuhan Gayretli
+// Commencement Date: 04.06.2014
+// Last Update      : 09.06.2014
+
+/*
+Servo motors have three wires: power, ground, and signal. 
+The power wire is typically red, and should be connected to the 5V pin on the Arduino board. 
+The ground wire is typically black or brown and should be connected to a ground pin on the Arduino board. 
+The signal pin is typically yellow, orange or white and should be connected to a digital pin on the Arduino board.  
+*/
+
+
+// Imports
+#include <Servo.h> 
+
+// Properies
+Servo servoMain;
+
+
+void setup()
+{
+  servoMain.attach(10); // Signal Pin 10
+  delay(1000);
+  servoMain.write(0);
+  delay(1000);
+}
+
+
+void loop()
+{
+  servoMain.write(180);  
+  delay(2000);
+  servoMain.write(120);
+  delay(500);
+  servoMain.write(60);
+  delay(500);
+  servoMain.write(0);
+  delay(500);
+} 
